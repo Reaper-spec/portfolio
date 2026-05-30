@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aahil — Developer & Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════
+       CURSOR GLOW
+  ════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>
+        A
+        <span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" data-text="About">About</a></li>
+        <li><a href="#projects" data-text="Projects">Projects</a></li>
+        <li><a href="#thinking" data-text="Thinking">Thinking</a></li>
+        <li><a href="#skills" data-text="Skills">Skills</a></li>
+        <li><a href="#journey" data-text="Journey">Journey</a></li>
+        <li><a href="#football" data-text="Edge">Edge</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">
+        <span class="cta-text">Contact</span>
+        <span class="cta-icon">→</span>
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#thinking">Thinking</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#football">Edge</a>
+      <a href="#contact" class="mobile-cta">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- HUD corner decorations -->
+    <div class="hud-corner hud-tl"></div>
+    <div class="hud-corner hud-tr"></div>
+    <div class="hud-corner hud-bl"></div>
+    <div class="hud-corner hud-br"></div>
+
+    <!-- scanning line -->
+    <div class="scan-line" id="scanLine"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span class="eyebrow-label">Available for Projects</span>
+        <span class="eyebrow-dot"></span>
+      </div>
+
+      <div class="hero-name-wrap">
+        <h1 class="hero-name" id="heroName">
+          <span class="name-line">Aahil</span>
+        </h1>
+        <div class="hero-name-glow"></div>
+      </div>
+
+      <div class="hero-role">
+        <span class="role-prefix">_</span>
+        <span class="role-text" id="roleText"></span>
+        <span class="role-cursor">|</span>
+      </div>
+
+      <p class="hero-tagline">
+        Building systems that make sense.<br />
+        Logic meets creativity — from first principles to real impact.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <span class="btn-bg"></span>
+          <span class="btn-label">View Projects</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <span class="btn-label">Get in Touch</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hstat-num">2+</span>
+          <span class="hstat-label">Projects Built</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hero-stat">
+          <span class="hstat-num">AI</span>
+          <span class="hstat-label">Current Focus</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hero-stat">
+          <span class="hstat-num">∞</span>
+          <span class="hstat-label">Curiosity Level</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-bg-grid"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>01 / About</span>
+        </div>
+        <h2 class="section-title">Curious by design,<br /><em>systematic</em> by nature</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm Aahil — a developer who cares about understanding systems, not just building surfaces. I got into tech because I wanted to know <strong>how things actually work</strong>, and that curiosity still drives most of what I do.</p>
+          <p>I'm drawn to the intersection of <strong>AI, web systems, and the psychology behind user behavior</strong> — how people interact with interfaces, why certain experiences feel intuitive, and what makes a product genuinely useful.</p>
+          <p>Outside the editor, I play football as a left winger or attacking midfielder. That's taught me more about <strong>decision-making and positioning under pressure</strong> than most theory ever could.</p>
+
+          <div class="about-chips">
+            <span class="chip">AI Integration</span>
+            <span class="chip">Web Systems</span>
+            <span class="chip">UX Psychology</span>
+            <span class="chip">System Design</span>
+            <span class="chip chip-alt">Football LW/CAM</span>
+            <span class="chip chip-alt">Anime</span>
+          </div>
+        </div>
+
+        <div class="about-cards reveal">
+          <div class="acard">
+            <div class="acard-icon">⬡</div>
+            <div class="acard-title">Systems Thinker</div>
+            <div class="acard-body">I think in systems, not scripts. Every project is an opportunity to design something that scales and makes structural sense.</div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">◎</div>
+            <div class="acard-title">Deep Curious</div>
+            <div class="acard-body">Reading docs is a starting point. Real understanding comes from building, breaking, and rebuilding — that's where it clicks.</div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">▷</div>
+            <div class="acard-title">Compounding Growth</div>
+            <div class="acard-body">Each build, failure, and fix is data. The compound effect of showing up every day is everything.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       PROJECTS SECTION
+  ════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>02 / Work</span>
+        </div>
+        <h2 class="section-title">Featured <em>Projects</em></h2>
+        <p class="section-sub">Not tutorials — real systems built to solve real problems.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal" data-index="01">
+          <div class="pcard-header">
+            <div class="pcard-num">01</div>
+            <div class="pcard-status">
+              <span class="status-dot active"></span>
+              Live
+            </div>
+          </div>
+          <h3 class="pcard-name">PathFinder</h3>
+          <p class="pcard-tagline">Career Recommendation Engine</p>
+          <p class="pcard-desc">A web app that maps your interests, strengths, and learning style to personalized career pathways with real resources to get started.</p>
+
+          <div class="pcard-problem">
+            <div class="pproblem-label">↳ Problem Solved</div>
+            <p>Students pick careers based on pressure or vague advice. No structured tool maps your actual profile to realistic paths with clear next steps.</p>
+          </div>
+
+          <div class="pcard-stack">
+            <span class="stech">HTML</span>
+            <span class="stech">CSS</span>
+            <span class="stech">JavaScript</span>
+            <span class="stech">Logic Engine</span>
+          </div>
+
+          <div class="pcard-learning">
+            <span class="learning-icon">✦</span>
+            Learned: rule-based recommendation logic, user flow design, and edge-case thinking before writing a single line.
+          </div>
+
+          <div class="pcard-links">
+            <a href="#" class="plink plink-demo">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="6"/><path d="M7 1v12M1 7h12"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="plink plink-gh">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1C3.686 1 1 3.686 1 7c0 2.65 1.717 4.895 4.1 5.689.3.055.41-.13.41-.289v-1.017c-1.669.363-2.017-.803-2.017-.803-.273-.694-.667-.879-.667-.879-.545-.372.041-.365.041-.365.602.042.919.618.919.618.535.917 1.403.652 1.745.499.054-.388.209-.653.38-.803-1.332-.151-2.732-.666-2.732-2.963 0-.654.234-1.189.617-1.608-.062-.152-.267-.76.059-1.585 0 0 .502-.16 1.645.613A5.73 5.73 0 0 1 7 4.168c.509.002 1.021.069 1.5.201 1.142-.773 1.643-.613 1.643-.613.327.825.121 1.433.06 1.585.384.419.616.954.616 1.608 0 2.304-1.403 2.81-2.739 2.958.215.185.407.551.407 1.11 0 .803-.007 1.45-.007 1.648 0 .16.108.347.411.288C11.285 11.893 13 9.649 13 7c0-3.314-2.686-6-6-6z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal" data-index="02">
+          <div class="pcard-header">
+            <div class="pcard-num">02</div>
+            <div class="pcard-status">
+              <span class="status-dot active"></span>
+              Live
+            </div>
+          </div>
+          <h3 class="pcard-name">AniLog</h3>
+          <p class="pcard-tagline">Anime & Media Tracker</p>
+          <p class="pcard-desc">A minimal personal tracking app for anime and media. Log, rate, annotate — build a private library of everything you've explored.</p>
+
+          <div class="pcard-problem">
+            <div class="pproblem-label">↳ Problem Solved</div>
+            <p>Existing trackers are cluttered with social noise. I wanted something minimal — fast to update, easy to browse, just for you.</p>
+          </div>
+
+          <div class="pcard-stack">
+            <span class="stech">HTML</span>
+            <span class="stech">CSS</span>
+            <span class="stech">JavaScript</span>
+            <span class="stech">LocalStorage</span>
+          </div>
+
+          <div class="pcard-learning">
+            <span class="learning-icon">✦</span>
+            Learned: CRUD data flow without a backend, designing around mental models, and why layout decisions matter more than decoration.
+          </div>
+
+          <div class="pcard-links">
+            <a href="#" class="plink plink-demo">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="6"/><path d="M7 1v12M1 7h12"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="plink plink-gh">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1C3.686 1 1 3.686 1 7c0 2.65 1.717 4.895 4.1 5.689.3.055.41-.13.41-.289v-1.017c-1.669.363-2.017-.803-2.017-.803-.273-.694-.667-.879-.667-.879-.545-.372.041-.365.041-.365.602.042.919.618.919.618.535.917 1.403.652 1.745.499.054-.388.209-.653.38-.803-1.332-.151-2.732-.666-2.732-2.963 0-.654.234-1.189.617-1.608-.062-.152-.267-.76.059-1.585 0 0 .502-.16 1.645.613A5.73 5.73 0 0 1 7 4.168c.509.002 1.021.069 1.5.201 1.142-.773 1.643-.613 1.643-.613.327.825.121 1.433.06 1.585.384.419.616.954.616 1.608 0 2.304-1.403 2.81-2.739 2.958.215.185.407.551.407 1.11 0 .803-.007 1.45-.007 1.648 0 .16.108.347.411.288C11.285 11.893 13 9.649 13 7c0-3.314-2.686-6-6-6z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 — Coming Soon -->
+        <article class="project-card project-card--next reveal" data-index="03">
+          <div class="pcard-header">
+            <div class="pcard-num">03</div>
+            <div class="pcard-status">
+              <span class="status-dot building"></span>
+              Building
+            </div>
+          </div>
+          <h3 class="pcard-name">Next Build</h3>
+          <p class="pcard-tagline">Something at the edge of AI × Utility</p>
+          <p class="pcard-desc">Currently designing the next system — something at the intersection of AI and practical, everyday usefulness. Drop back soon.</p>
+          <div class="pcard-stack">
+            <span class="stech">TBD</span>
+          </div>
+          <div class="coming-soon-badge">Coming Soon</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       THINKING / APPROACH SECTION
+  ════════════════════════════════════ -->
+  <section id="thinking">
+    <div class="section-bg-dots"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>03 / Approach</span>
+        </div>
+        <h2 class="section-title">How I <em>think</em></h2>
+        <p class="section-sub">The mental models underneath the work.</p>
+      </div>
+
+      <div class="thinking-grid">
+        <div class="thinking-card reveal" data-delay="0">
+          <div class="tc-glyph">⬡</div>
+          <h3 class="tc-title">Systems over pages</h3>
+          <p class="tc-body">I don't build isolated components. I think about how each piece connects — data flow, state, user journey — before touching the UI.</p>
+          <div class="tc-line"></div>
+        </div>
+        <div class="thinking-card reveal" data-delay="100">
+          <div class="tc-glyph">◎</div>
+          <h3 class="tc-title">User behavior first</h3>
+          <p class="tc-body">Good interfaces are designed around how people actually behave, not ideal behavior. I study friction before designing solutions.</p>
+          <div class="tc-line"></div>
+        </div>
+        <div class="thinking-card reveal" data-delay="200">
+          <div class="tc-glyph">▷</div>
+          <h3 class="tc-title">Build to understand</h3>
+          <p class="tc-body">Real understanding comes from building, breaking, and fixing. Reading docs is a starting point — building is where it actually clicks.</p>
+          <div class="tc-line"></div>
+        </div>
+        <div class="thinking-card reveal" data-delay="300">
+          <div class="tc-glyph">≡</div>
+          <h3 class="tc-title">Clarity scales</h3>
+          <p class="tc-body">Complexity grows. Code messy at 100 lines is unworkable at 1000. Clarity isn't a style preference — it's a system requirement.</p>
+          <div class="tc-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       SKILLS SECTION
+  ════════════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>04 / Toolkit</span>
+        </div>
+        <h2 class="section-title">Skills &amp; <em>Tools</em></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-block reveal">
+          <div class="skill-block-header">
+            <span class="skb-dot cyan"></span>
+            <span class="skb-label">Frontend</span>
+          </div>
+          <ul class="skill-list">
+            <li><span class="sl-slash">/</span> HTML &amp; CSS</li>
+            <li><span class="sl-slash">/</span> JavaScript (ES6+)</li>
+            <li><span class="sl-slash">/</span> Responsive Design</li>
+            <li><span class="sl-slash">/</span> React (Learning)</li>
+            <li><span class="sl-slash">/</span> CSS Animations</li>
+            <li><span class="sl-slash">/</span> Component Architecture</li>
+          </ul>
+        </div>
+
+        <div class="skill-block reveal">
+          <div class="skill-block-header">
+            <span class="skb-dot violet"></span>
+            <span class="skb-label">Tools</span>
+          </div>
+          <ul class="skill-list">
+            <li><span class="sl-slash">/</span> Git &amp; GitHub</li>
+            <li><span class="sl-slash">/</span> VS Code</li>
+            <li><span class="sl-slash">/</span> Figma</li>
+            <li><span class="sl-slash">/</span> Chrome DevTools</li>
+            <li><span class="sl-slash">/</span> Terminal / Bash</li>
+            <li><span class="sl-slash">/</span> Vercel / Netlify</li>
+          </ul>
+        </div>
+
+        <div class="skill-block reveal">
+          <div class="skill-block-header">
+            <span class="skb-dot amber"></span>
+            <span class="skb-label">Exploring</span>
+          </div>
+          <ul class="skill-list">
+            <li><span class="sl-slash">/</span> AI APIs (OpenAI etc.)</li>
+            <li><span class="sl-slash">/</span> Node.js / Backend</li>
+            <li><span class="sl-slash">/</span> System Design</li>
+            <li><span class="sl-slash">/</span> Framer Motion</li>
+            <li><span class="sl-slash">/</span> UX Principles</li>
+            <li><span class="sl-slash">/</span> Python Basics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       CURRENT FOCUS SECTION
+  ════════════════════════════════════ -->
+  <section id="focus">
+    <div class="section-bg-grid"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>05 / Now</span>
+        </div>
+        <h2 class="section-title">Current <em>Focus</em></h2>
+        <p class="section-sub">What I'm actively building and thinking about right now.</p>
+      </div>
+
+      <div class="focus-table reveal">
+        <div class="focus-row" data-index="01">
+          <div class="fr-index">01</div>
+          <div class="fr-title">AI Integration</div>
+          <div class="fr-desc">Connecting AI APIs into web apps meaningfully — not gimmicks, but genuinely useful behavior.</div>
+          <div class="fr-badge fr-active">Active</div>
+        </div>
+        <div class="focus-row" data-index="02">
+          <div class="fr-index">02</div>
+          <div class="fr-title">UI / UX Principles</div>
+          <div class="fr-desc">Gestalt theory, cognitive load, interaction patterns — how design decisions affect behavior.</div>
+          <div class="fr-badge fr-active">Active</div>
+        </div>
+        <div class="focus-row" data-index="03">
+          <div class="fr-index">03</div>
+          <div class="fr-title">Advanced Interactions</div>
+          <div class="fr-desc">Animation, motion design, and how micro-interactions change the feeling of a product.</div>
+          <div class="fr-badge fr-active">Active</div>
+        </div>
+        <div class="focus-row" data-index="04">
+          <div class="fr-index">04</div>
+          <div class="fr-title">System Design Thinking</div>
+          <div class="fr-desc">Scalability, data modeling, API structure — moving from writing features to designing systems.</div>
+          <div class="fr-badge fr-building">Building</div>
+        </div>
+        <div class="focus-row" data-index="05">
+          <div class="fr-index">05</div>
+          <div class="fr-title">React Ecosystem</div>
+          <div class="fr-desc">Deepening JS fundamentals before React — understanding what the framework is actually abstracting.</div>
+          <div class="fr-badge fr-next">Next</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       JOURNEY / TIMELINE
+  ════════════════════════════════════ -->
+  <section id="journey">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>06 / Timeline</span>
+        </div>
+        <h2 class="section-title">The <em>Journey</em></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-spine"></div>
+
+        <div class="tl-item reveal" data-side="left">
+          <div class="tl-dot tl-dot--cyan"></div>
+          <div class="tl-card">
+            <div class="tl-when">The Beginning</div>
+            <h3 class="tl-title">First line of code</h3>
+            <p class="tl-body">Started with HTML and CSS, building simple pages and asking: how does everything on the internet actually work? The curiosity was immediate and hasn't stopped.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" data-side="right">
+          <div class="tl-dot tl-dot--blue"></div>
+          <div class="tl-card">
+            <div class="tl-when tl-when--blue">First Build</div>
+            <h3 class="tl-title">From tutorials to real problems</h3>
+            <p class="tl-body">Built PathFinder and AniLog — projects that solved actual problems. Code became a tool, not just a subject. The shift from learning to building is everything.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" data-side="left">
+          <div class="tl-dot tl-dot--cyan"></div>
+          <div class="tl-card">
+            <div class="tl-when">Now</div>
+            <h3 class="tl-title">Expanding the system</h3>
+            <p class="tl-body">Going deeper into JavaScript, design thinking, and AI integration. Connecting the dots between tech, product thinking, and real user needs.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" data-side="right">
+          <div class="tl-dot tl-dot--dim"></div>
+          <div class="tl-card tl-card--dim">
+            <div class="tl-when tl-when--dim">Next</div>
+            <h3 class="tl-title">AI / Product Engineering</h3>
+            <p class="tl-body">Building AI-integrated products, developing a product engineering mindset, and moving into roles at the intersection of technology, strategy, and real-world impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       FOOTBALL / EDGE SECTION
+  ════════════════════════════════════ -->
+  <section id="football">
+    <div class="section-bg-dots"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>07 / The Edge</span>
+        </div>
+        <h2 class="section-title">Football &amp; the<br /><em>mindset it builds</em></h2>
+      </div>
+
+      <div class="football-grid">
+        <div class="football-left reveal">
+          <div class="fp-item">
+            <div class="fp-icon">⚡</div>
+            <div class="fp-content">
+              <h4>Decision-making under pressure</h4>
+              <p>Playing LW/CAM/ST means constant fast decisions — read the situation, pick the right option instantly. That transfers directly to debugging, prioritization, and designing under constraints.</p>
+            </div>
+          </div>
+          <div class="fp-item">
+            <div class="fp-icon">◈</div>
+            <div class="fp-content">
+              <h4>Positioning &amp; awareness</h4>
+              <p>Good attackers think two moves ahead — where will the ball be, where should I be? In code: thinking about state before the function, architecture before the feature.</p>
+            </div>
+          </div>
+          <div class="fp-item">
+            <div class="fp-icon">↻</div>
+            <div class="fp-content">
+              <h4>Consistency over talent</h4>
+              <p>No one becomes elite from occasional effort. Daily repetition — even on bad days — is what compounds. Showing up to code every single day works exactly the same way.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="football-right reveal">
+          <div class="fquote-card">
+            <div class="fquote-mark">"</div>
+            <blockquote>
+              The best players aren't the most talented. They're the ones who make the right decision fastest, and stay composed enough to execute it.
+            </blockquote>
+            <cite>— A principle from the pitch that applies everywhere</cite>
+            <div class="fpos-row">
+              <span class="fpos">LW</span>
+              <span class="fpos">CAM</span>
+              <span class="fpos">ST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="section-label centered">
+          <span class="label-line"></span>
+          <span>08 / Contact</span>
+          <span class="label-line"></span>
+        </div>
+        <h2 class="section-title centered">Let's <em>connect</em></h2>
+        <p class="contact-body">Whether it's a project idea, a question about something I've built, or just to talk tech and football — I'm open to it.</p>
+
+        <div class="contact-links">
+          <a href="mailto:aahil@example.com" class="clink">
+            <div class="clink-icon">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="m2 5 7 6 7-6"/></svg>
+            </div>
+            <div class="clink-text">
+              <span class="clink-label">Email</span>
+              <span class="clink-val">aahil@example.com</span>
+            </div>
+            <div class="clink-arrow">→</div>
+          </a>
+
+          <a href="https://github.com" target="_blank" class="clink">
+            <div class="clink-icon">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 1C4.58 1 1 4.58 1 9c0 3.536 2.291 6.53 5.47 7.583.4.072.547-.173.547-.386V14.78c-2.223.483-2.691-1.072-2.691-1.072-.363-.924-.888-1.17-.888-1.17-.726-.496.055-.486.055-.486.803.057 1.226.825 1.226.825.713 1.22 1.871.868 2.327.664.072-.516.279-.868.507-1.068-1.775-.202-3.64-.888-3.64-3.952 0-.873.312-1.588.822-2.148-.083-.202-.356-1.016.077-2.118 0 0 .67-.214 2.2.82A7.67 7.67 0 0 1 9 5.576a7.67 7.67 0 0 1 2.004.27c1.528-1.034 2.197-.82 2.197-.82.434 1.102.161 1.916.08 2.118.511.56.82 1.275.82 2.148 0 3.072-1.87 3.748-3.65 3.946.287.247.542.734.542 1.48 0 1.067-.01 1.929-.01 2.191 0 .213.144.463.55.385C14.712 15.527 17 12.535 17 9c0-4.42-3.58-8-8-8z"/></svg>
+            </div>
+            <div class="clink-text">
+              <span class="clink-label">GitHub</span>
+              <span class="clink-val">github.com/aahil</span>
+            </div>
+            <div class="clink-arrow">→</div>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" class="clink">
+            <div class="clink-icon">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="1" width="16" height="16" rx="3"/><path d="M6 8v5M6 5.5V6M9 13V9.5c0-1 .5-1.5 1.5-1.5S12 9 12 10v3"/></svg>
+            </div>
+            <div class="clink-text">
+              <span class="clink-label">LinkedIn</span>
+              <span class="clink-val">linkedin.com/in/aahil</span>
+            </div>
+            <div class="clink-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">[</span>A<span class="logo-bracket">]</span>
+        </div>
+        <p class="footer-copy">© 2025 Aahil — Designed &amp; built from scratch</p>
+        <a href="#hero" class="footer-top">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12V4M4 8l4-4 4 4"/></svg>
+          Back to top
+        </a>
+      </div>
+    </div>
+  </footer>
+
+<script src="intdex.js"></script>
+</body>
+</html>
