@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PathFinder — Career Discovery System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <!-- ═══════════════════════════════ LANDING PAGE ═══════════════════════════════ -->
+  <section id="screen-landing" class="screen active">
+    <div class="landing-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <nav class="nav">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">PathFinder</span>
+      </div>
+      <div class="nav-actions">
+        <div class="nav-auth-buttons" id="nav-auth-buttons">
+          <button class="nav-btn nav-login" id="nav-login">Sign In</button>
+          <button class="nav-btn nav-signup" id="nav-signup">Sign Up</button>
+        </div>
+        <div class="nav-user hidden" id="nav-user">
+          <span class="nav-welcome" id="nav-welcome">Welcome, User</span>
+          <button class="nav-btn nav-logout" id="nav-logout">Logout</button>
+        </div>
+      </div>
+    </nav>
+    <div class="landing-content">
+      <div class="badge">Career Discovery System · Ages 14–18</div>
+      <h1 class="headline">
+        Discover the career<br/>
+        <em>you were built for.</em>
+      </h1>
+      <p class="subheadline">
+        20 intelligent scenario-based questions. Your complete career profile,<br/>
+        top 5 paths, future outlook, and a step-by-step roadmap to the top 10%.
+      </p>
+      <div class="landing-stats">
+        <div class="stat"><span class="stat-num">20</span><span class="stat-label">Questions</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Career Paths</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">~12</span><span class="stat-label">Minutes</span></div>
+      </div>
+      <button class="btn-primary btn-start" id="btn-start">
+        Begin Your Discovery
+        <span class="btn-arrow">→</span>
+      </button>
+      <p class="landing-note">No sign-up required. Your answers stay on your device.</p>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════ QUIZ SCREEN ═══════════════════════════════ -->
+  <section id="screen-quiz" class="screen">
+    <div class="quiz-bg">
+      <div class="orb orb-4"></div>
+    </div>
+    <div class="quiz-shell">
+      <div class="quiz-header">
+        <div class="logo small">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">PathFinder</span>
+        </div>
+        <div class="progress-block">
+          <div class="progress-label">
+            <span id="q-current">1</span><span class="progress-sep">/</span><span id="q-total">20</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="quiz-body">
+        <div class="question-card" id="question-card">
+          <div class="q-category" id="q-category">Scenario</div>
+          <h2 class="q-text" id="q-text">Loading question...</h2>
+          <div class="q-options" id="q-options">
+            <!-- Options injected by JS -->
+          </div>
+        </div>
+      </div>
+ 
+      <div class="quiz-footer">
+        <button class="btn-back" id="btn-back">← Back</button>
+        <div class="dimension-meter" id="dimension-meter">
+          <div class="dim-pill" data-dim="A" title="Analytical"><span>A</span></div>
+          <div class="dim-pill" data-dim="S" title="Social"><span>S</span></div>
+          <div class="dim-pill" data-dim="C" title="Creative"><span>C</span></div>
+          <div class="dim-pill" data-dim="P" title="Practical"><span>P</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════ LOADING SCREEN ═══════════════════════════════ -->
+  <section id="screen-loading" class="screen">
+    <div class="loading-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="loading-content">
+      <div class="loading-spinner">
+        <div class="spinner-ring ring-1"></div>
+        <div class="spinner-ring ring-2"></div>
+        <div class="spinner-ring ring-3"></div>
+        <span class="spinner-icon">◈</span>
+      </div>
+      <h2 class="loading-title">Analyzing Your Profile</h2>
+      <p class="loading-sub" id="loading-message">Processing your cognitive patterns...</p>
+      <div class="loading-steps" id="loading-steps">
+        <div class="load-step" id="ls-1">Mapping personality dimensions</div>
+        <div class="load-step" id="ls-2">Matching career clusters</div>
+        <div class="load-step" id="ls-3">Calculating future relevance</div>
+        <div class="load-step" id="ls-4">Building your roadmap</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════ RESULTS SCREEN ═══════════════════════════════ -->
+  <section id="screen-results" class="screen">
+    <div class="results-bg">
+      <div class="orb orb-r1"></div>
+      <div class="orb orb-r2"></div>
+    </div>
+ 
+    <div class="results-shell">
+      <!-- RESULTS NAV -->
+      <div class="results-nav">
+        <div class="logo">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">PathFinder</span>
+        </div>
+        <button class="btn-retake" id="btn-retake">Retake Assessment</button>
+      </div>
+ 
+      <!-- HERO SECTION -->
+      <div class="results-hero" id="results-hero">
+        <div class="hero-left">
+          <div class="hero-badge">Your Career Report</div>
+          <h1 class="hero-name" id="hero-title">Your Profile</h1>
+          <p class="hero-summary" id="hero-summary">Summary loading...</p>
+        </div>
+        <div class="hero-right">
+          <div class="profile-radar" id="profile-radar">
+            <!-- SVG radar chart injected here -->
+          </div>
+        </div>
+      </div>
+ 
+      <!-- TRAIT PILLS -->
+      <div class="trait-section">
+        <h3 class="section-label">Your Dominant Traits</h3>
+        <div class="trait-pills" id="trait-pills"></div>
+      </div>
+ 
+      <!-- THINKING STYLE -->
+      <div class="thinking-style-section" id="thinking-style-section">
+        <div class="thinking-card" id="thinking-card"></div>
+      </div>
+ 
+      <!-- SECTION TABS -->
+      <div class="results-tabs">
+        <button class="rtab active" data-tab="careers">Career Matches</button>
+        <button class="rtab" data-tab="future">Future Outlook</button>
+        <button class="rtab" data-tab="roadmap">Roadmap</button>
+        <button class="rtab" data-tab="backup">Backup Paths</button>
+      </div>
+ 
+      <!-- TAB: CAREERS -->
+      <div class="tab-panel active" id="tab-careers">
+        <div class="careers-grid" id="careers-grid">
+          <!-- Career cards injected -->
+        </div>
+      </div>
+ 
+      <!-- TAB: FUTURE OUTLOOK -->
+      <div class="tab-panel" id="tab-future">
+        <div class="future-intro">
+          <p>Here's how each of your matched careers is expected to evolve over the next 10–12 years, considering AI impact, market demand, and industry shifts.</p>
+        </div>
+        <div class="future-grid" id="future-grid">
+          <!-- Future cards injected -->
+        </div>
+      </div>
+ 
+      <!-- TAB: ROADMAP -->
+      <div class="tab-panel" id="tab-roadmap">
+        <div class="roadmap-intro">
+          <p>Select a career below to see your personalized step-by-step roadmap to reaching the top 10% of performers in that field.</p>
+        </div>
+        <div class="roadmap-selector" id="roadmap-selector">
+          <!-- Career selector buttons injected -->
+        </div>
+        <div class="roadmap-content" id="roadmap-content">
+          <!-- Roadmap phases injected -->
+        </div>
+      </div>
+ 
+      <!-- TAB: BACKUP PATHS -->
+      <div class="tab-panel" id="tab-backup">
+        <div class="backup-intro">
+          <p>If your primary career paths don't work out, or you want to explore adjacent opportunities, these backup paths leverage your same core strengths.</p>
+        </div>
+        <div class="backup-grid" id="backup-grid">
+          <!-- Backup career cards injected -->
+        </div>
+      </div>
+ 
+      <!-- FOOTER -->
+      <div class="results-footer">
+        <p>PathFinder Career Discovery System · Results are guidance, not destiny. Your potential is yours to shape.</p>
+        <button class="btn-primary btn-retake-bottom" id="btn-retake-bottom">Take Assessment Again</button>
+      </div>
+    </div>
+  </section>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+
+  <div class="auth-modal hidden" id="auth-modal">
+    <div class="auth-backdrop" id="auth-backdrop"></div>
+    <div class="auth-dialog">
+      <button class="auth-close" id="auth-close" aria-label="Close authentication modal">×</button>
+      <div class="auth-header">
+        <h2 id="auth-title">Sign In</h2>
+        <div class="auth-switch" id="auth-switch">
+          <button class="auth-tab active" data-mode="signin">Sign In</button>
+          <button class="auth-tab" data-mode="signup">Sign Up</button>
+        </div>
+      </div>
+      <form class="auth-form" id="auth-form">
+        <label for="auth-username">Username</label>
+        <input id="auth-username" name="username" type="text" autocomplete="username" required />
+        <label for="auth-password">Password</label>
+        <input id="auth-password" name="password" type="password" autocomplete="current-password" required />
+        <div class="auth-extra" id="auth-extra">
+          <label for="auth-confirm-password">Confirm Password</label>
+          <input id="auth-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" />
+        </div>
+        <p class="auth-message" id="auth-message"></p>
+        <button class="btn-primary auth-submit" id="auth-submit" type="submit">Continue</button>
+      </form>
+    </div>
+  </div>
+
+<link rel="stylesheet" href="./career.css">
+<script src="./career.js"></script>
+</body>
+</html>
