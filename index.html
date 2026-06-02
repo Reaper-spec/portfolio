@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aahil — Developer & Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- GSAP FREE CDN — only free plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="intex.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-box">
+      <div class="loader-name"><span class="lb">[</span>A<span class="lb">]</span></div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <div class="loader-label" id="loaderLabel">Initialising...</div>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor"><div id="cursorDot"></div></div>
+  <div id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo"><span class="lb">[</span>A<span class="lb">]</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#thinking">Thinking</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#football">Edge</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Contact <span class="cta-arr">→</span></a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#thinking">Thinking</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#football">Edge</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hud hud-tl"></div>
+    <div class="hud hud-tr"></div>
+    <div class="hud hud-bl"></div>
+    <div class="hud hud-br"></div>
+    <div class="scan-line"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow" id="hEyebrow">
+        <span class="edot"></span>Available for Projects<span class="edot"></span>
+      </div>
+      <div class="hero-name-wrap" id="hNameWrap">
+        <h1 class="hero-name">Aahil</h1>
+        <div class="name-glow"></div>
+      </div>
+      <div class="hero-role" id="hRole">
+        <span class="rprefix">_</span>
+        <span id="roleText"></span>
+        <span class="rcursor">|</span>
+      </div>
+      <p class="hero-tagline" id="hTagline">
+        Building systems that make sense.<br/>
+        Logic meets creativity — from first principles to real impact.
+      </p>
+      <div class="hero-actions" id="hActions">
+        <a href="#projects" class="btn-primary"><span class="btn-bg"></span><span>View Projects</span><span class="btn-arr">→</span></a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-stats" id="hStats">
+        <div class="hstat"><span class="hstat-n">2+</span><span class="hstat-l">Projects Built</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">AI</span><span class="hstat-l">Current Focus</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">∞</span><span class="hstat-l">Curiosity Level</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint" id="hScroll"><div class="sh-line"></div><span>scroll</span></div>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section id="about">
+    <div class="bg-grid"></div>
+    <div class="container">
+      <div class="sec-hdr">
+        <div class="sec-label anim-label"><span class="ll"></span><span>01 / About</span></div>
+        <h2 class="sec-title anim-title">Curious by design,<br/><em>systematic</em> by nature</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text anim-fade">
+          <p>I'm Aahil — a developer who cares about understanding systems, not just building surfaces. I got into tech because I wanted to know <strong>how things actually work</strong>, and that curiosity still drives most of what I do.</p>
+          <p>I'm drawn to the intersection of <strong>AI, web systems, and the psychology behind user behavior</strong> — how people interact with interfaces, why certain experiences feel intuitive, and what makes a product genuinely useful.</p>
+          <p>Outside the editor, I play football as a left winger or attacking midfielder. That's taught me more about <strong>decision-making under pressure</strong> than most theory ever could.</p>
+          <div class="chips">
+            <span class="chip">AI Integration</span><span class="chip">Web Systems</span>
+            <span class="chip">UX Psychology</span><span class="chip">System Design</span>
+            <span class="chip chip-b">Football LW/CAM</span><span class="chip chip-b">Anime</span>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="acard anim-card"><div class="acard-ico">⬡</div><div class="acard-t">Systems Thinker</div><p class="acard-b">I think in systems, not scripts. Every project is an opportunity to design something that scales and makes structural sense.</p></div>
+          <div class="acard anim-card"><div class="acard-ico">◎</div><div class="acard-t">Deep Curious</div><p class="acard-b">Reading docs is a starting point. Real understanding comes from building, breaking, and rebuilding.</p></div>
+          <div class="acard anim-card"><div class="acard-ico">▷</div><div class="acard-t">Compounding Growth</div><p class="acard-b">Each build, failure, and fix is data. The compound effect of showing up every day is everything.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROJECTS ══════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-hdr">
+        <div class="sec-label anim-label"><span class="ll"></span><span>02 / Work</span></div>
+        <h2 class="sec-title anim-title">Featured <em>Projects</em></h2>
+        <p class="sec-sub anim-fade">Not tutorials — real systems built to solve real problems.</p>
+      </div>
+      <div class="proj-grid">
+
+        <article class="proj-card anim-card">
+          <div class="pc-hdr"><span class="pc-num">01</span><span class="pc-status"><span class="sdot live"></span>Live</span></div>
+          <h3 class="pc-name">PathFinder</h3>
+          <p class="pc-tag">Career Recommendation Engine</p>
+          <p class="pc-desc">A web app that maps your interests, strengths, and learning style to personalized career pathways with real resources to get started.</p>
+          <div class="pc-prob"><div class="ppl">↳ Problem Solved</div><p>Students pick careers based on pressure or vague advice. No structured tool maps your profile to realistic paths with clear next steps.</p></div>
+          <div class="pc-stack"><span class="st">HTML</span><span class="st">CSS</span><span class="st">JavaScript</span><span class="st">Logic Engine</span></div>
+          <div class="pc-learn"><span class="li">✦</span> Learned: rule-based recommendation logic, user flow design, and edge-case thinking before writing a single line.</div>
+          <div class="pc-links">
+            <a href="#" class="pl">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="6"/><path d="M7 1v12M1 7h12"/></svg>Live Demo
+            </a>
+            <a href="https://github.com/Aahil-1151" target="_blank" rel="noopener" class="pl">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1C3.686 1 1 3.686 1 7c0 2.65 1.717 4.895 4.1 5.689.3.055.41-.13.41-.289v-1.017c-1.669.363-2.017-.803-2.017-.803-.273-.694-.667-.879-.667-.879-.545-.372.041-.365.041-.365.602.042.919.618.919.618.535.917 1.403.652 1.745.499.054-.388.209-.653.38-.803-1.332-.151-2.732-.666-2.732-2.963 0-.654.234-1.189.617-1.608-.062-.152-.267-.76.059-1.585 0 0 .502-.16 1.645.613A5.73 5.73 0 0 1 7 4.168c.509.002 1.021.069 1.5.201 1.142-.773 1.643-.613 1.643-.613.327.825.121 1.433.06 1.585.384.419.616.954.616 1.608 0 2.304-1.403 2.81-2.739 2.958.215.185.407.551.407 1.11 0 .803-.007 1.45-.007 1.648 0 .16.108.347.411.288C11.285 11.893 13 9.649 13 7c0-3.314-2.686-6-6-6z"/></svg>GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card anim-card">
+          <div class="pc-hdr"><span class="pc-num">02</span><span class="pc-status"><span class="sdot live"></span>Live</span></div>
+          <h3 class="pc-name">AniLog</h3>
+          <p class="pc-tag">Anime & Media Tracker</p>
+          <p class="pc-desc">A minimal personal tracking app for anime and media. Log, rate, annotate — build a private library of everything you've explored.</p>
+          <div class="pc-prob"><div class="ppl">↳ Problem Solved</div><p>Existing trackers are cluttered with social noise. I wanted something minimal — fast to update, easy to browse, just for you.</p></div>
+          <div class="pc-stack"><span class="st">HTML</span><span class="st">CSS</span><span class="st">JavaScript</span><span class="st">LocalStorage</span></div>
+          <div class="pc-learn"><span class="li">✦</span> Learned: CRUD data flow without a backend, designing around mental models, and why layout decisions matter more than decoration.</div>
+          <div class="pc-links">
+            <a href="#" class="pl">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="6"/><path d="M7 1v12M1 7h12"/></svg>Live Demo
+            </a>
+            <a href="https://github.com/Aahil-1151" target="_blank" rel="noopener" class="pl">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1C3.686 1 1 3.686 1 7c0 2.65 1.717 4.895 4.1 5.689.3.055.41-.13.41-.289v-1.017c-1.669.363-2.017-.803-2.017-.803-.273-.694-.667-.879-.667-.879-.545-.372.041-.365.041-.365.602.042.919.618.919.618.535.917 1.403.652 1.745.499.054-.388.209-.653.38-.803-1.332-.151-2.732-.666-2.732-2.963 0-.654.234-1.189.617-1.608-.062-.152-.267-.76.059-1.585 0 0 .502-.16 1.645.613A5.73 5.73 0 0 1 7 4.168c.509.002 1.021.069 1.5.201 1.142-.773 1.643-.613 1.643-.613.327.825.121 1.433.06 1.585.384.419.616.954.616 1.608 0 2.304-1.403 2.81-2.739 2.958.215.185.407.551.407 1.11 0 .803-.007 1.45-.007 1.648 0 .16.108.347.411.288C11.285 11.893 13 9.649 13 7c0-3.314-2.686-6-6-6z"/></svg>GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card proj-card--next anim-card">
+          <div class="pc-hdr"><span class="pc-num">03</span><span class="pc-status"><span class="sdot building"></span>Building</span></div>
+          <h3 class="pc-name">Next Build</h3>
+          <p class="pc-tag">Something at the edge of AI × Utility</p>
+          <p class="pc-desc">Currently designing the next system — something at the intersection of AI and practical, everyday usefulness. Drop back soon.</p>
+          <div class="pc-stack"><span class="st">TBD</span></div>
+          <div class="coming-soon">Coming Soon</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ THINKING ══════════ -->
+  <section id="thinking">
+    <div class="bg-dots"></div>
+    <div class="container">
+      <div class="sec-hdr">
+        <div class="sec-label anim-label"><span class="ll"></span><span>03 / Approach</span></div>
+        <h2 class="sec-title anim-title">How I <em>think</em></h2>
+        <p class="sec-sub anim-fade">The mental models underneath the work.</p>
+      </div>
+      <div class="think-grid">
+        <div class="think-card anim-card"><div class="tc-g">⬡</div><h3 class="tc-t">Systems over pages</h3><p class="tc-b">I don't build isolated components. I think about how each piece connects — data flow, state, user journey — before touching the UI.</p><div class="tc-line"></div></div>
+        <div class="think-card anim-card"><div class="tc-g">◎</div><h3 class="tc-t">User behavior first</h3><p class="tc-b">Good interfaces are designed around how people actually behave, not ideal behavior. I study friction before designing solutions.</p><div class="tc-line"></div></div>
+        <div class="think-card anim-card"><div class="tc-g">▷</div><h3 class="tc-t">Build to understand</h3><p class="tc-b">Real understanding comes from building, breaking, and fixing. Reading docs is a starting point — building is where it clicks.</p><div class="tc-line"></div></div>
+        <div class="think-card anim-card"><div class="tc-g">≡</div><h3 class="tc-t">Clarity scales</h3><p class="tc-b">Complexity grows. Code messy at 100 lines is unworkable at 1000. Clarity isn't a style preference — it's a system requirement.</p><div class="tc-line"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SKILLS ══════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-hdr">
+        <div class="sec-label anim-label"><span class="ll"></span><span>04 / Toolkit</span></div>
+        <h2 class="sec-title anim-title">Skills &amp; <em>Tools</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-block anim-card">
+          <div class="sb-hdr"><span class="sb-dot cyan"></span><span class="sb-lbl">Frontend</span></div>
+          <ul class="sk-list"><li><span class="sl">/</span> HTML &amp; CSS</li><li><span class="sl">/</span> JavaScript (ES6+)</li><li><span class="sl">/</span> Responsive Design</li><li><span class="sl">/</span> React (Learning)</li><li><span class="sl">/</span> CSS Animations</li><li><span class="sl">/</span> Component Architecture</li></ul>
+        </div>
+        <div class="skill-block anim-card">
+          <div class="sb-hdr"><span class="sb-dot violet"></span><span class="sb-lbl">Tools</span></div>
+          <ul class="sk-list"><li><span class="sl">/</span> Git &amp; GitHub</li><li><span class="sl">/</span> VS Code</li><li><span class="sl">/</span> Figma</li><li><span class="sl">/</span> Chrome DevTools</li><li><span class="sl">/</span> Terminal / Bash</li><li><span class="sl">/</span> Vercel / Netlify</li></ul>
+        </div>
+        <div class="skill-block anim-card">
+          <div class="sb-hdr"><span class="sb-dot amber"></span><span class="sb-lbl">Exploring</span></div>
+          <ul class="sk-list"><li><span class="sl">/</span> AI APIs (OpenAI etc.)</li><li><span class="sl">/</span> Node.js / Backend</li><li><span class="sl">/</span> System Design</li><li><span class="sl">/</span> Framer Motion</li><li><span class="sl">/</span> UX Principles</li><li><span class="sl">/</span> Python Basics</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOCUS ══════════ -->
+  <section id="focus">
+    <div class="bg-grid"></div>
+    <div class="container">
+      <div class="sec-hdr">
+        <div class="sec-label anim-label"><span class="ll"></span><span>05 / Now</span></div>
+        <h2 class="sec-title anim-title">Current <em>Focus</em></h2>
+        <p class="sec-sub anim-fade">What I'm actively building and thinking about right now.</p>
+      </div>
+      <div class="focus-table">
+        <div class="focus-row anim-row"><div class="fr-i">01</div><div class="fr-t">AI Integration</div><div class="fr-d">Connecting AI APIs into web apps meaningfully — not gimmicks, but genuinely useful behavior.</div><div class="fr-b fr-active">Active</div></div>
+        <div class="focus-row anim-row"><div class="fr-i">02</div><div class="fr-t">UI / UX Principles</div><div class="fr-d">Gestalt theory, cognitive load, interaction patterns — how design decisions affect behavior.</div><div class="fr-b fr-active">Active</div></div>
+        <div class="focus-row anim-row"><div class="fr-i">03</div><div class="fr-t">Advanced Interactions</div><div class="fr-d">Animation, motion design, and how micro-interactions change the feeling of a product.</div><div class="fr-b fr-active">Active</div></div>
+        <div class="focus-row anim-row"><div class="fr-i">04</div><div class="fr-t">System Design Thinking</div><div class="fr-d">Scalability, data modeling, API structure — from writing features to designing systems.</div><div class="fr-b fr-building">Building</div></div>
+        <div class="focus-row anim-row"><div class="fr-i">05</div><div class="fr-t">React Ecosystem</div><div class="fr-d">Deepening JS fundamentals before React — understanding what the framework is actually abstracting.</div><div class="fr-b fr-next">Next</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ JOURNEY ══════════ -->
+  <section id="journey">
+    <div class="container">
+      <div class="sec-hdr">
+        <div class="sec-label anim-label"><span class="ll"></span><span>06 / Timeline</span></div>
+        <h2 class="sec-title anim-title">The <em>Journey</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-spine" id="tlSpine"></div>
+        <div class="tl-item anim-tl-l">
+          <div class="tl-card"><div class="tl-when">The Beginning</div><h3 class="tl-t">First line of code</h3><p class="tl-b">Started with HTML and CSS, building simple pages and asking: how does everything on the internet actually work? The curiosity was immediate.</p></div>
+          <div class="tl-dot tl-cyan"></div>
+          <div class="tl-spacer"></div>
+        </div>
+        <div class="tl-item anim-tl-r">
+          <div class="tl-spacer"></div>
+          <div class="tl-dot tl-blue"></div>
+          <div class="tl-card"><div class="tl-when tl-w-blue">First Build</div><h3 class="tl-t">From tutorials to real problems</h3><p class="tl-b">Built PathFinder and AniLog — projects that solved actual problems. Code became a tool, not just a subject.</p></div>
+        </div>
+        <div class="tl-item anim-tl-l">
+          <div class="tl-card"><div class="tl-when">Now</div><h3 class="tl-t">Expanding the system</h3><p class="tl-b">Going deeper into JavaScript, design thinking, and AI integration. Connecting the dots between tech, product thinking, and real user needs.</p></div>
+          <div class="tl-dot tl-cyan"></div>
+          <div class="tl-spacer"></div>
+        </div>
+        <div class="tl-item anim-tl-r">
+          <div class="tl-spacer"></div>
+          <div class="tl-dot tl-dim"></div>
+          <div class="tl-card tl-card-dim"><div class="tl-when tl-w-dim">Next</div><h3 class="tl-t">AI / Product Engineering</h3><p class="tl-b">Building AI-integrated products, developing a product engineering mindset, and moving into roles at the intersection of technology, strategy, and real impact.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTBALL ══════════ -->
+  <section id="football">
+    <div class="bg-dots"></div>
+    <div class="container">
+      <div class="sec-hdr">
+        <div class="sec-label anim-label"><span class="ll"></span><span>07 / The Edge</span></div>
+        <h2 class="sec-title anim-title">Football &amp; the<br/><em>mindset it builds</em></h2>
+      </div>
+      <div class="fb-grid">
+        <div class="fb-left">
+          <div class="fp anim-fade"><div class="fp-ico">⚡</div><div class="fp-txt"><h4>Decision-making under pressure</h4><p>Playing LW/CAM/ST means constant fast decisions — read the situation, pick the right option instantly. That transfers directly to debugging, prioritisation, and designing under constraints.</p></div></div>
+          <div class="fp anim-fade"><div class="fp-ico">◈</div><div class="fp-txt"><h4>Positioning &amp; awareness</h4><p>Good attackers think two moves ahead. In code: thinking about state before the function, architecture before the feature.</p></div></div>
+          <div class="fp anim-fade"><div class="fp-ico">↻</div><div class="fp-txt"><h4>Consistency over talent</h4><p>No one becomes elite from occasional effort. Daily repetition — even on bad days — is what compounds. Same with code.</p></div></div>
+        </div>
+        <div class="fb-right anim-card">
+          <div class="fq-card">
+            <div class="fq-mark">"</div>
+            <blockquote>The best players aren't the most talented. They're the ones who make the right decision fastest, and stay composed enough to execute it.</blockquote>
+            <cite>— A principle from the pitch that applies everywhere</cite>
+            <div class="fpos-row"><span class="fpos">LW</span><span class="fpos">CAM</span><span class="fpos">ST</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="contact">
+    <div class="contact-glow"></div>
+    <div class="container">
+      <div class="contact-inner">
+        <div class="sec-label anim-label" style="justify-content:center"><span class="ll"></span><span>08 / Contact</span><span class="ll"></span></div>
+        <h2 class="sec-title anim-title" style="text-align:center">Let's <em>connect</em></h2>
+        <p class="contact-body anim-fade">Whether it's a project idea, a question about something I've built, or just to talk tech and football — I'm open to it.</p>
+        <div class="clinks">
+          <a href="mailto:aahil.m0021@gmail.com" class="clink anim-clink">
+            <div class="clink-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 8 10-8"/></svg></div>
+            <div class="clink-txt"><span class="cl-lbl">Email</span><span class="cl-val">aahil.m0021@gmail.com</span></div>
+            <div class="clink-arr">→</div>
+          </a>
+          <a href="https://github.com/Aahil-1151" target="_blank" rel="noopener" class="clink anim-clink">
+            <div class="clink-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.062-.272-.487-1.01-.962-1.51-.962-.501 0-.998.191-1.362.508.418.419.654 1.008.654 1.567 0 2.25-1.366 2.75-2.668 2.895.21.18.398.55.398 1.11 0 .8-.008 1.447-.008 1.644 0 .16.108.347.418.288C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></div>
+            <div class="clink-txt"><span class="cl-lbl">GitHub</span><span class="cl-val">github.com/Aahil-1151</span></div>
+            <div class="clink-arr">→</div>
+          </a>
+          <a href="https://linkedin.com/in/mohammed-aahil-1a79ab412" target="_blank" rel="noopener" class="clink anim-clink">
+            <div class="clink-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 11v5M8 8v.5M12 16v-3.5c0-1 .5-1.5 1.5-1.5s1.5.5 1.5 1.5V16"/></svg></div>
+            <div class="clink-txt"><span class="cl-lbl">LinkedIn</span><span class="cl-val">linkedin.com/in/mohammedaahil</span></div>
+            <div class="clink-arr">→</div>
+          </a>
+        </div>
+        <div class="avail anim-fade">
+          <span class="avail-dot"></span>
+          Open to collaborations and new projects
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="f-logo"><span class="lb">[</span>A<span class="lb">]</span></div>
+        <p class="f-copy">© 2025 Aahil — Designed &amp; built from scratch</p>
+        <a href="#hero" class="f-top"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12V4M4 8l4-4 4 4"/></svg> Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
